@@ -1,0 +1,117 @@
+@import "pages/colors";
+
+$nav-item-hover-border-width:   5px;
+
+.navigation-list {
+  list-style-type: none;
+  padding-left: 0;
+  .navigation-item {
+    font-family: "HelveticaNeue", sans-serif;
+    font-size: 24pt;
+
+    text-align: right;
+    padding-right: $nav-item-hover-border-width;
+    padding-left: $nav-item-hover-border-width;
+    border-right: $nav-item-hover-border-width solid $spitzgoby_background_color;
+
+    a {
+      color: $spitzgoby_text_color;
+    }
+
+    &:hover {
+      &.yellow {
+        a {
+          color: $spitzgoby_yellow;
+        }
+        border-color: $spitzgoby_yellow;
+      }
+      &.orange {
+        a {
+          color: $spitzgoby_orange_dark;
+        }
+        border-color: $spitzgoby_orange_dark;
+      }
+      &.blue {
+        a {
+          color: $spitzgoby_blue;
+        }
+        border-color: $spitzgoby_blue;
+      }
+      &.purple {
+        a {
+          color: $spitzgoby_purple;
+        }
+        border-color: $spitzgoby_purple;
+      }
+    }
+
+    &.active {
+      background-color: $spitzgoby_text_color;
+      border-color: $spitzgoby_background_color;
+      a {
+        color: white;
+      }
+      &:hover {
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+#top-bar {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+
+  background-color: $spitzgoby_blue_light;
+  .header-image {
+    padding-right: $nav-item-hover-border-width;
+    float: right;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: "HelveticaNeue", sans-serif;
+    color: $spitzgoby_blue;
+    margin-top: 0;
+    margin-bottom: 0.125em;
+  }
+
+  h1 {
+    font-size: 20pt;
+  }
+
+  h2 {
+    font-size: 18pt;
+  }
+
+  span.bold {
+    font-weight: bold;
+  }
+}
+
+@media(max-width: 768px) {
+  .navigation-list {
+    text-align: right;
+    .navigation-item {
+      display: inline-block;
+      text-align: right;
+      font-size: 20pt;
+      padding: 0 (2 * $nav-item-hover-border-width) 0 (2 * $nav-item-hover-border-width);
+
+      border-right: none;
+      border-bottom: $nav-item-hover-border-width solid $spitzgoby_background_color;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  #top-bar {
+    .header-image {
+    }
+
+    h1, h2, h3, h4 {
+      display: none;
+    }
+  }
+}

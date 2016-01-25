@@ -1,0 +1,20 @@
+.project-updates {
+
+  .project-update {
+    clear: both;
+    height: 150px;
+    margin-top: 15px;
+    &:hover {
+      background-color: #ddd;
+    }
+
+    .project-icon {
+      margin-right: 15px;
+      float: left;
+    }
+
+    .project-title {
+      font-weight: bold;
+    }
+  }
+}

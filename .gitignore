@@ -1,0 +1,10 @@
+/vendor
+/node_modules
+Homestead.yaml
+Homestead.json
+.env
+*.css.map
+.DS_Store
+
+## Posts are handled by a separate git repo
+posts/

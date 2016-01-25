@@ -1,0 +1,23 @@
+.articles {
+  .article {
+    a {
+      color: #333;
+    }
+    padding: 12px 0px 12px 0px;
+
+    &:hover {
+      background-color: #ddd;
+    }
+
+    .article-title {
+      margin-top: 0;
+      padding-bottom: 0;
+      font-weight: bold;
+    }
+
+    .article-description {
+      padding-top: 4px;
+    }
+
+  }
+}
