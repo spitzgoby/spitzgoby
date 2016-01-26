@@ -23,5 +23,11 @@
                 <a href="{{ url('admin/logout') }}">Logout</a>
             </li>
         @endif
+        <li class="navigation-item">
+            <a class="social-icon" href="https://angel.co/tom-leu" target="_blank"><i class="fa fa-angellist"></i></a>
+            <a class="social-icon" href="https://linkedin.com/in/spitzgoby" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+            <a class="social-icon" href="https://twitter.com/sptizgoby" target="_blank"><i class="fa fa-twitter-square"></i></a>
+            <a class="social-icon" href="https://github.com/spitzgoby" target="_blank"><i class="fa fa-github-square"></i></a>
+        </li>
     </ul>
 </header>

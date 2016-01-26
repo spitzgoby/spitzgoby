@@ -5844,23 +5844,15 @@ button.close {
   .project-updates .project-update .project-title {
     font-weight: bold; }
 
-#social-icons {
-  text-align: center; }
-  #social-icons .social-icon {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 4em; }
-
 #name h1 {
   text-align: center;
   font-family: "Chivo", "HelveticaNeue", sans-serif;
-  font-size: 4em; }
+  font-size: 4em;
+  margin-top: 1em;
+  margin-bottom: 1em; }
 
 #profile p {
   font-size: 1.4em; }
-
-#skills .skill-icon {
-  margin: 0; }
 
 .resume-thumbnail {
   width: 25%; }
@@ -5871,6 +5863,24 @@ button.close {
 
 body {
   background-color: #f6f6f6; }
+
+h1 > i.fa {
+  font-size: 72pt; }
+
+p, h2, h3 {
+  margin: 0px;
+  padding: 5px; }
+
+h1, h2, h3, h4 {
+  font-family: "HelveticaNeue-UltraLight"; }
+  h1.header-jumbo, h2.header-jumbo, h3.header-jumbo, h4.header-jumbo {
+    font-size: 4em; }
+  h1.header-blue, h2.header-blue, h3.header-blue, h4.header-blue {
+    color: #018C93; }
+  h1.header-orange, h2.header-orange, h3.header-orange, h4.header-orange {
+    color: #F37000; }
+  h1.header-purple, h2.header-purple, h3.header-purple, h4.header-purple {
+    color: #103AA3; }
 
 p {
   font-size: 18pt;
@@ -5895,28 +5905,20 @@ a:focus, a:hover {
   .link-orange:hover {
     color: #FF9C48; }
 
+.link-light-orange {
+  color: #FF9C48; }
+  .link-light-orange:hover {
+    color: #FFC99B; }
+
 .link-purple {
   color: #4A70CE; }
   .link-purple:hover {
     color: #103AA3; }
 
-h1 > i.fa {
-  font-size: 72pt; }
-
-p, h2, h3 {
-  margin: 0px;
-  padding: 5px; }
-
-h1, h2, h3, h4 {
-  font-family: "HelveticaNeue-UltraLight"; }
-  h1.header-jumbo, h2.header-jumbo, h3.header-jumbo, h4.header-jumbo {
-    font-size: 4em; }
-  h1.header-blue, h2.header-blue, h3.header-blue, h4.header-blue {
-    color: #018C93; }
-  h1.header-orange, h2.header-orange, h3.header-orange, h4.header-orange {
-    color: #F37000; }
-  h1.header-purple, h2.header-purple, h3.header-purple, h4.header-purple {
-    color: #103AA3; }
+.link-white {
+  color: white; }
+  .link-white:hover {
+    color: #f6f6f6; }
 
 code {
   font-family: 'Inconsolata'; }

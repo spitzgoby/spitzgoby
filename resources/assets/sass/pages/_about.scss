@@ -1,29 +1,16 @@
-#social-icons {
-  text-align: center;
-  .social-icon {
-    padding-left: 2 * $nav-item-hover-border-width;
-    padding-right: 2 * $nav-item-hover-border-width;
-    font-size: 4em;
-  }
-}
-
 #name {
   h1 {
     text-align: center;
     font-family: "Chivo", "HelveticaNeue", sans-serif;
     font-size: 4em;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 }
 
 #profile {
   p {
     font-size: 1.4em;
-  }
-}
-
-#skills {
-  .skill-icon {
-    margin: 0;
   }
 }
 

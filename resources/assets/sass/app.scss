@@ -1,8 +1,8 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "pages/colors";
-@import "_nav";
-@import "pages/blog";
-@import "pages/project";
+@import "nav";
+@import "pages/posts";
+@import "pages/code";
 @import "pages/about";
 
 .container {
@@ -12,6 +12,34 @@
 
 body {
   background-color: #f6f6f6;
+}
+
+h1 > i.fa {
+  font-size: 72pt;
+}
+
+p, h2, h3 {
+  margin: 0px;
+  padding: 5px;
+}
+
+h1, h2, h3, h4 {
+  font-family: "HelveticaNeue-UltraLight";
+
+  &.header-jumbo {
+    font-size: 4em;
+  }
+  &.header-blue {
+    color: $spitzgoby_blue_dark;
+  }
+
+  &.header-orange {
+    color: $spitzgoby_orange_dark;
+  }
+
+  &.header-purple {
+    color: $spitzgoby_purple_dark;
+  }
 }
 
 p {
@@ -45,38 +73,22 @@ a {
     color: $spitzgoby_orange;
   }
 }
+.link-light-orange {
+  color: $spitzgoby_orange;
+  &:hover {
+    color: $spitzgoby_orange_light;
+  }
+}
 .link-purple {
   color: $spitzgoby_purple;
   &:hover {
     color: $spitzgoby_purple_dark;
   }
 }
-
-h1 > i.fa {
-  font-size: 72pt;
-}
-
-p, h2, h3 {
-  margin: 0px;
-  padding: 5px;
-}
-
-h1, h2, h3, h4 {
-  font-family: "HelveticaNeue-UltraLight";
-
-  &.header-jumbo {
-    font-size: 4em;
-  }
-  &.header-blue {
-    color: $spitzgoby_blue_dark;
-  }
-
-  &.header-orange {
-    color: $spitzgoby_orange_dark;
-  }
-
-  &.header-purple {
-    color: $spitzgoby_purple_dark;
+.link-white {
+  color: white;
+  &:hover {
+    color: #f6f6f6;
   }
 }
 
