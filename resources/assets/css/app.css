@@ -5819,17 +5819,17 @@ button.close {
   #top-bar h1, #top-bar h2, #top-bar h3, #top-bar h4 {
     display: none; } }
 
-.articles .article {
+.articles article {
   padding: 12px 0px 12px 0px; }
-  .articles .article a {
+  .articles article a {
     color: #333; }
-  .articles .article:hover {
+  .articles article:hover {
     background-color: #ddd; }
-  .articles .article .article-title {
+  .articles article .article-title {
     margin-top: 0;
     padding-bottom: 0;
     font-weight: bold; }
-  .articles .article .article-description {
+  .articles article .article-description {
     padding-top: 4px; }
 
 .project-updates .project-update {

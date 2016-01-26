@@ -19,15 +19,16 @@ elixir(function(mix) {
         .styles([
             'resources/assets/css/app.css',
             'resources/assets/css/magnific-popup.css',
+            'resources/assets/css/select2.css',
             'resources/assets/css/railscasts.css'
         ], 'public/css/app.css')
-        .browserify('main.js', 'resources/assets/js/app.js')
         .scripts([
             'resources/assets/js/app.js',
             'resources/assets/js/lib/jquery.min.js',
             'resources/assets/js/lib/jquery.magnific-popup.js',
+            'resources/assets/js/lib/select2.js',
             'resources/assets/js/lib/highlight.pack.js',
             'resources/assets/js/lib/vue.js'
-        ], 'public/js/main.js');
-
+        ], 'public/js/main.js')
+        .browserify('main.js', 'resources/assets/js/app.js');
 });

@@ -1,9 +1,8 @@
 @extends('layouts.sidebar')
 
 @section('content')
-
     <div id="app">
-        {!! $article->html !!}
+        {!! $post->html !!}
     </div>
 @stop
 

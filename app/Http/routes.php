@@ -27,37 +27,26 @@ Route::group(['middleware' => ['web']], function () {
         return view('welcome');
     });
 
-    // ***** //
     // ABOUT //
-    // ***** //
     Route::get('/about', ['as' => 'about.index', 'uses' => 'AboutController@getIndex']);
     Route::get('/about/resume', ['as' => 'about.resume', 'uses' => 'AboutController@getResume']);
 
-    // ***** //
     // POSTS //
-    // ***** //
     Route::resource('posts', 'PostsController', ['only' => ['index', 'show']]);
 
-    // **** //
     // CODE //
-    // **** //
     Route::resource('code', 'CodeController', ['only' => ['index', 'show']]);
 
-    // ***** //
     // ADMIN //
-    // ***** //
     Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function() {
+        // LOGIN //
         Route::get('login', 'Auth\AuthController@getLogin');
         Route::post('login', 'Auth\AuthController@postLogin');
         Route::get('logout', 'Auth\AuthController@getLogout');
 
         Route::group(['middleware' => 'auth'], function() {
             Route::get('/', function() {
-                if (Auth::check()) {
-                    return "Logged In";
-                } else {
-                    return "Guest";
-                }
+                return view('welcome');
             });
 
             Route::resource('posts', 'PostsController');

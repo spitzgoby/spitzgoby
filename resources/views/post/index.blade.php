@@ -3,9 +3,9 @@
 @section('content')
     <div class="container-fluid">
         <div class="articles">
-            @if(isset($articles))
-                @foreach($articles as $article)
-                    @include('post._post', 'article')
+            @if(isset($posts))
+                @foreach($posts as $post)
+                    @include('post._post', ['post' => $post])
                 @endforeach
             @else
                 <article>
@@ -14,5 +14,8 @@
                 </article>
             @endif
         </div>
+        @if(\Auth::check())
+            <a class="btn btn-default" href="{{ route('admin.posts.create') }}"><i class="fa fa-plus"></i> Create Post</a>
+        @endif
     </div>
 @stop
