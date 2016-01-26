@@ -1,5 +1,8 @@
 <header>
     <ul class="navigation-list">
+        <li class="navigation-item blue {{ active('/') }}">
+            <a href="{{ url('/') }}">Home</a>
+        </li>
         <li class="navigation-item yellow {{ active('about.*') }}">
             <a href="{{ route('about.index') }}">About</a>
         </li>
