@@ -15,7 +15,7 @@ class AboutController extends Controller
     }
 
     public function getResume() {
-        return response()->download('pdf/Thomas_Leu_Resume.pdf');
+        return response()->download('pdf/Thomas_Leu_Resume_Web.pdf');
     }
 
 }
