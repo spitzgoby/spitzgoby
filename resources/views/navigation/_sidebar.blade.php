@@ -15,5 +15,10 @@
         <li class="navigation-item purple {{ active('code.*') }}">
             <a href="{{ route('code.index') }}">Code</a>
         </li>
+        @if(\Auth::check())
+            <li class="navigation-item blue">
+                <a href="{{ url('admin/logout') }}">Logout</a>
+            </li>
+        @endif
     </ul>
 </header>
