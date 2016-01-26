@@ -43,10 +43,6 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('logout', 'Auth\AuthController@getLogout');
 
         Route::group(['middleware' => 'auth'], function() {
-            Route::get('/', function() {
-                return view('welcome');
-            });
-
             Route::resource('posts', 'PostsController');
         });
     });

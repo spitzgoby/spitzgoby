@@ -5,7 +5,7 @@
         <a href="{{ route('posts.show', $post->slug) }}">
     @endif
         <h2 class="article-title">{{ $post->title }}</h2>
-        <p class="article-summary">{{ $post->summary }}</p>
+        {!! $post->summary !!}
     </a>
     @if(\Auth::check() && \Auth::id() == $post->user_id)
         <a class="btn btn-info" href="{{ route('admin.posts.edit', $post->id) }}">

@@ -2,12 +2,11 @@
 
 @section('content')
     <div id="app">
+        <h1>{{ $post->title }}</h1>
         {!! $post->html !!}
     </div>
 @stop
 
 @section('script')
-    <script>
-        hljs.initHighlightingOnLoad();
-    </script>
+    @include('_highlight')
 @stop

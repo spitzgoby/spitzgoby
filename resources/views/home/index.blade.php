@@ -5,32 +5,7 @@
     <div id="app" class="container-fluid">
         <div class="blog">
             <h1 class="header header-orange">Recent Blog Posts</h1>
-            <ul class="list-unstyled articles">
-                <li>
-                    <article>
-                        <h2 class="article-title">DST and the iOS SDK (Coming Soon)</h2>
-                        <p class="article-description">
-                            Daylight Saving Time (DST) is one of the trickier
-                            problems to face when building applications that rely
-                            heavily on dates and times. So how do iOS frameworks
-                            deal with it?
-                        </p>
-                    </article>
-                </li>
-                <li class="article">
-                    <article>
-                        <h2 class="article-title">
-                            Building a video player with JWPlayer and the
-                            YouTube API (Coming Soon)
-                        </h2>
-                        <p class="article-description">
-                            This lesson will guide you through the process of
-                            using the JWPlayer video plugin and Google's
-                            YouTube API to create a simple video search tool.
-                        </p>
-                    </article>
-                </li>
-            </ul>
+            @include('post._postList')
         </div>
         <div class="spacer"></div>
         <div class="code">
@@ -56,4 +31,8 @@
             </ul>
         </div>
     </div>
+@stop
+
+@section('script')
+    @include('_highlight')
 @stop

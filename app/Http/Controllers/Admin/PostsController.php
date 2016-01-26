@@ -79,6 +79,8 @@ class PostsController extends Controller
     public function update(Post $post, PostRequest $request)
     {
         $post->update($request->all());
+        // TODO Move resluggify to post update event observer
+        $post->resluggify();
         if ($request->has('tag_list')) {
             $post->tags()->sync(Tag::findOrCreateMany($request->get('tag_list')));
         }

@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use Cviebrock\EloquentSluggable\SluggableInterface;
 use Cviebrock\EloquentSluggable\SluggableTrait;
 use GrahamCampbell\Markdown\Facades\Markdown;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model implements SluggableInterface
@@ -26,6 +27,8 @@ class Post extends Model implements SluggableInterface
      */
     protected $sluggable = ['build_from' => 'title'];
 
+    protected $allowableTags = "<pre><code><p>";
+
     /**
      * Get the article's html
      * @return string
@@ -41,7 +44,7 @@ class Post extends Model implements SluggableInterface
      */
     public function getSummaryAttribute()
     {
-        return str_limit(strip_tags($this->html), 200);
+        return str_limit(strip_tags($this->html, $this->allowableTags), 200);
     }
 
     /**
@@ -59,6 +62,28 @@ class Post extends Model implements SluggableInterface
     {
         $carbon = \Carbon\Carbon::parse($this->attributes['published_at']);
         return $carbon->format('Y-m-d');
+    }
+
+    /**
+     * Get the published articles
+     *
+     * @param Builder $query
+     * @return Builder
+     */
+    public function scopePublished(Builder $query)
+    {
+        return $query->where('published_at', '<=', \Carbon\Carbon::now());
+    }
+
+    /**
+     * @param Builder $query
+     * @param int     $count
+     *
+     * @return Builder $query
+     */
+    public function scopeRecent(Builder $query, int $count)
+    {
+        return $query->published()->orderBy('published_at', 'DESC')->take($count);
     }
 
     /**
