@@ -5840,8 +5840,8 @@ div.alert {
     margin-top: 0;
     padding-bottom: 0;
     font-weight: bold; }
-  .articles article .article-description {
-    padding-top: 4px; }
+  .articles article p {
+    font-size: 1.2em; }
 
 form {
   margin-top: 1em; }
