@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 
 class CodeController extends Controller
 {
-    public function getIndex()
+    public function index()
     {
         return view('code.index');
     }
