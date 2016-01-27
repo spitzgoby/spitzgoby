@@ -21,6 +21,8 @@
         </div>
 
         <section id="content" class="col-sm-8 col-md-6">
+            @include('flash::message')
+
             @yield('content')
 
             <script src="/js/main.js"></script>

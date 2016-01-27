@@ -152,6 +152,7 @@ return [
         GrahamCampbell\Markdown\MarkdownServiceProvider::class,
         Watson\Active\ActiveServiceProvider::class,
         Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -211,6 +212,7 @@ return [
         'Form'      => Illuminate\Html\FormFacade::class,
         'Markdown'  => GrahamCampbell\Markdown\Facades\Markdown::class,
         'Active'    => Watson\Active\Facades\Active::class,
+        'Flash'     => Laracasts\Flash\Flash::class,
     ],
 
 ];

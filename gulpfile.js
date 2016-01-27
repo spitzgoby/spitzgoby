@@ -25,6 +25,7 @@ elixir(function(mix) {
         .scripts([
             'resources/assets/js/app.js',
             'resources/assets/js/lib/jquery.min.js',
+            'resources/assets/js/lib/bootstrap.min.js',
             'resources/assets/js/lib/jquery.magnific-popup.js',
             'resources/assets/js/lib/select2.js',
             'resources/assets/js/lib/highlight.pack.js',

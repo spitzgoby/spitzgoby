@@ -83,9 +83,18 @@ class PostsController extends Controller
             $post->tags()->sync(Tag::findOrCreateMany($request->get('tag_list')));
         }
 
+        flash()->success('The post has been updated');
+
         return redirect('/admin/posts');
     }
 
+    /**
+     * DELETE admin/posts/{post}
+     *
+     * @param Post $post
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * @throws \Exception
+     */
     public function destroy(Post $post)
     {
         if (\Auth::id() == $post->user_id) {
