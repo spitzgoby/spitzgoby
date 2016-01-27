@@ -26,6 +26,11 @@
             @yield('content')
 
             <script src="/js/main.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $('div.alert').not('.important').delay(3000).slideUp(300);
+                });
+            </script>
             @yield('script')
 
             <hr>

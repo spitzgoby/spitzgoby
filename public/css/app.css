@@ -5827,6 +5827,9 @@ button.close {
   #top-bar h1, #top-bar h2, #top-bar h3, #top-bar h4 {
     display: none; } }
 
+div.alert {
+  margin-top: 1em; }
+
 .articles article {
   padding: 12px 0px 12px 0px; }
   .articles article a {
