@@ -5760,7 +5760,15 @@ button.close {
     padding-left: 5px;
     border-right: 5px solid #f6f6f6; }
     .navigation-list .navigation-item a {
-      color: #333; }
+      color: #666; }
+      .navigation-list .navigation-item a.social-icon.github:hover {
+        color: #333; }
+      .navigation-list .navigation-item a.social-icon.twitter:hover {
+        color: #55acee; }
+      .navigation-list .navigation-item a.social-icon.linkedin:hover {
+        color: #0976b4; }
+      .navigation-list .navigation-item a.social-icon.angellist:hover {
+        color: #000; }
     .navigation-list .navigation-item:hover.yellow {
       border-color: #FFC348; }
       .navigation-list .navigation-item:hover.yellow a {
@@ -5778,7 +5786,7 @@ button.close {
       .navigation-list .navigation-item:hover.purple a {
         color: #4A70CE; }
     .navigation-list .navigation-item.active {
-      background-color: #333;
+      background-color: #666;
       border-color: #f6f6f6; }
       .navigation-list .navigation-item.active a {
         color: white; }

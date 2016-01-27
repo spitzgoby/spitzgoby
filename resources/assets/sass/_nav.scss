@@ -15,7 +15,33 @@ $nav-item-hover-border-width:   5px;
     border-right: $nav-item-hover-border-width solid $spitzgoby_background_color;
 
     a {
-      color: $spitzgoby_text_color;
+      color: $spitzgoby_nav_text_color;
+
+      &.social-icon {
+        &.github {
+          &:hover {
+            color: $github_brand_color;
+          }
+        }
+
+        &.twitter {
+          &:hover {
+            color: $twitter_brand_color;
+          }
+        }
+
+        &.linkedin {
+          &:hover {
+            color: $linkedin_brand_color;
+          }
+        }
+
+        &.angellist {
+          &:hover {
+            color: $angellist_brand_color;
+          }
+        }
+      }
     }
 
     &:hover {
@@ -46,7 +72,7 @@ $nav-item-hover-border-width:   5px;
     }
 
     &.active {
-      background-color: $spitzgoby_text_color;
+      background-color: $spitzgoby_nav_text_color;
       border-color: $spitzgoby_background_color;
       a {
         color: white;
