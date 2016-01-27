@@ -85,4 +85,13 @@ class PostsController extends Controller
 
         return redirect('/admin/posts');
     }
+
+    public function destroy(Post $post)
+    {
+        if (\Auth::id() == $post->user_id) {
+            $post->delete();
+        }
+
+        return redirect('/admin/posts');
+    }
 }
