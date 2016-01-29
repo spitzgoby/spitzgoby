@@ -23,7 +23,7 @@
 */
 
 Route::group(['prefix' => 'api'], function() {
-    Route::get('/code/jwsearch', ['as' => 'api.code.jwsearch', 'uses' => 'CodeController@getYoutubeSearchResults']);
+    Route::get('/code/jwsearch', ['as' => 'api.code.jwsearch', 'uses' => 'ApiController@getYoutubeSearchResults']);
 });
 
 Route::group(['middleware' => ['web']], function () {
