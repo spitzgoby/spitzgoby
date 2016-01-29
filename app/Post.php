@@ -97,7 +97,7 @@ class Post extends Model implements SluggableInterface
      * @param int     $count
      * @return Builder $query
      */
-    public function scopeRecent(Builder $query, int $count)
+    public function scopeRecent(Builder $query, $count)
     {
         return $query->published()->orderBy('published_at', 'DESC')->take($count);
     }
