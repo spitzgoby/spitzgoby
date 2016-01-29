@@ -8,16 +8,13 @@
 
    <div id="app">
        <video-player
-           :url.sync="url"
+           url="https://www.youtube.com/watch?v=ZTLAx3VDX7g"
            title="Star Wars Acapella"
            description="Jimmy Fallon and the cast of The Force Awakens sing the
                     theme songs from Star Wars"
        ></video-player>
 
-       <video-search
-           :url.sync="url"
-           :query.sync="query"
-       ></video-search>
+       <video-search></video-search>
 
 
        <template id="video-player-template">
@@ -34,7 +31,7 @@
                </div>
                <ul class="list-unstyled">
                    <li v-for="result in results" class="result">
-                       <div @click="setUrl($index)">
+                       <div @click="setVideo($index)">
                            <div class="video-thumbnail">
                                <img :src="result.thumbnailUrl" alt="Video thumbnail">
                            </div>
@@ -60,11 +57,23 @@
             template: '#video-player-template',
             props: ['url', 'title', 'description'],
             events: {
-                'loadVideo': function() {
+                'loadVideo': function(video) {
+                    this.setVideo(video);
                     var self = this;
                     this.player.load({
-                        file: self.url
+                        file: self.url,
+                        title: self.title,
+                        description: self.description
                     });
+                }
+            },
+
+            methods: {
+                setVideo: function(video) {
+                    console.log(video);
+                    this.url = "https://youtube.com/watch?v=" + video.videoID;
+                    this.title = video.title;
+                    this.description = video.description;
                 }
             },
 
@@ -83,10 +92,10 @@
 
         Vue.component('video-search', {
             template: '#video-search-template',
-            props: ['url', 'query'],
             data: function() {
                 return {
-                  results: []
+                    query: "",
+                    results: []
                 };
             },
             methods: {
@@ -103,10 +112,9 @@
                     });
                 },
 
-                setUrl: function(index) {
-                    var videoID = this.results[index].videoID;
-                    this.url = 'https://youtube.com/watch?v=' + videoID;
-                    this.$dispatch('urlChanged');
+                setVideo: function(index) {
+                    var video = this.results[index];
+                    this.$dispatch('videoChanged', video);
                 }
             }
         });
@@ -114,14 +122,9 @@
         new Vue({
             el: '#app',
 
-            data: {
-                url: 'https://www.youtube.com/watch?v=ZTLAx3VDX7g',
-                query: ''
-            },
-
             events: {
-                'urlChanged': function() {
-                    this.$broadcast('loadVideo');
+                'videoChanged': function(video) {
+                    this.$broadcast('loadVideo', video);
                 }
             }
 
