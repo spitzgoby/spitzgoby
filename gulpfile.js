@@ -1,7 +1,5 @@
 var elixir = require('laravel-elixir');
 
-require('laravel-elixir-vueify');
-
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -22,14 +20,12 @@ elixir(function(mix) {
             'resources/assets/css/select2.css',
             'resources/assets/css/railscasts.css'
         ], 'public/css/app.css')
-        .browserify('main.js', 'resources/assets/js/app.js')
         .scripts([
             'resources/assets/js/app.js',
             'resources/assets/js/lib/jquery.min.js',
             'resources/assets/js/lib/bootstrap.min.js',
             'resources/assets/js/lib/jquery.magnific-popup.js',
             'resources/assets/js/lib/select2.js',
-            'resources/assets/js/lib/highlight.pack.js',
-            'resources/assets/js/lib/vue.js'
+            'resources/assets/js/lib/highlight.pack.js'
         ], 'public/js/main.js');
 });

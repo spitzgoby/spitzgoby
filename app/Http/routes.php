@@ -33,7 +33,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::resource('posts', 'PostsController', ['only' => ['index', 'show']]);
 
     // CODE //
-    Route::get('/code/jwsearch', 'CodeController@getJWSearch');
+    Route::get('/code/jwsearch', ['as' => 'code.jwsearch', 'uses' => 'CodeController@getJWSearch']);
     Route::resource('code', 'CodeController', ['only' => ['index', 'show']]);
 
     // ADMIN //
