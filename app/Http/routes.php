@@ -22,6 +22,10 @@
 |
 */
 
+Route::group(['prefix' => 'api'], function() {
+    Route::get('/code/jwsearch', ['as' => 'api.code.jwsearch', 'uses' => 'CodeController@getYoutubeSearchResults']);
+});
+
 Route::group(['middleware' => ['web']], function () {
     Route::get('/', ['as' => 'home', 'uses' => 'HomeController@getIndex']);
 
@@ -34,6 +38,7 @@ Route::group(['middleware' => ['web']], function () {
 
     // CODE //
     Route::get('/code/jwsearch', ['as' => 'code.jwsearch', 'uses' => 'CodeController@getJWSearch']);
+
     Route::resource('code', 'CodeController', ['only' => ['index', 'show']]);
 
     // ADMIN //

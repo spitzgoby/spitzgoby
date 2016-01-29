@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\YoutubeRequest;
+use Madcoda\Youtube;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 
 class CodeController extends Controller
 {
@@ -17,5 +17,11 @@ class CodeController extends Controller
     public function getJWSearch()
     {
         return view('code.jwsearch');
+    }
+
+    public function getYoutubeSearchResults(YoutubeRequest $request)
+    {
+        $youtube = new Youtube(['key' => env('YOUTUBE_API_KEY', null)]);
+        return $youtube->searchVideos($request->get('query'), 10);
     }
 }
