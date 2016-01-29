@@ -13,4 +13,9 @@ class CodeController extends Controller
     {
         return view('code.index');
     }
+
+    public function getJWSearch()
+    {
+        return view('code.jwsearch');
+    }
 }

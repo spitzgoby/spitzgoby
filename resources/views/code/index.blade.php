@@ -2,7 +2,9 @@
 
 @section('content')
     <div class="container-fluid">
-        <h1 class="main-header header-blue">Not Ready Yet</h1>
-        <h2>But it's gonna be awesome!</h2>
+        <a href="/code/jwsearch">
+            <h1 class="main-header header-blue">JWPlayer Youtube Search</h1>
+            <p>A quick demo using JWPlayer and Youtube's Search API</p>
+        </a>
     </div>
 @stop
